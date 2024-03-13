@@ -36,7 +36,16 @@ nav ul li{
 }
 
 .container{
-    min-height: 70vh;
+    min-height: 68vh;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 12px; 
+    padding: 34px;
+    background-image: url('bg.jpg');
 }
 .bottom{
     position: sticky;
@@ -47,9 +56,59 @@ nav ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
+}
+
+.icons{
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.icons i{
+    cursor: pointer;
 }
 
 #myProgressBar{
     width: 75vw;
     
+}
+
+.songItemContainer{
+    margin-top: 50px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timeStamp{
+    margin: 0 23px;
+}
+
+.timeStamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 23vh;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
