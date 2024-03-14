@@ -6,6 +6,7 @@ let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay')
 let myProgressBar = document.getElementById('myProgressBar')
 let gif = document.getElementById('gif')
+let songItems = Array.from(document.getElementsByClassName('songItem'))
 
 let songs = [
     {songName: "Salam-e-Ishq", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
@@ -19,6 +20,12 @@ let songs = [
     {songName: "Hamari Adhuri kahani", filePath: "songs/9.mp3", coverPath: "covers/9.jpg"},
     {songName: "Chal mahiye", filePath: "songs/10.mp3", coverPath: "covers/10.jpg"},
 ]
+
+songItems.forEach((element, i)=> {
+    console.log(element, i)
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+});
 
 // Handle play or pause click
 masterPlay.addEventListener('click', ()=>{
